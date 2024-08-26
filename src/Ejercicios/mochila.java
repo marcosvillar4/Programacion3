@@ -55,7 +55,7 @@ public class mochila {
 
     public void calc(float peso){
 
-        if (index <= (ratioList.size() - 1) && peso > ratioList.get(index).item.peso && ratioList.get(index).item.cant > 0 ){
+        if (index <= (ratioList.size() - 1) && peso > 0){
             float calc = Math.min(ratioList.get(index).item.getCant(), (peso / ratioList.get(index).item.getPeso()));
             resp.put(ratioList.get(index).item.getDesc(), calc);
             index++;
@@ -63,7 +63,7 @@ public class mochila {
             calc(peso - (calc * ratioList.get(index - 1).item.peso));
         }
         else {
-            //System.out.println("Index: " + (index - 1) + " Peso: " + peso + " Last Item: " + ratioList.get(index - 1).item.desc);
+            System.out.println("Index: " + (index - 1) + " Peso: " + peso + " Last Item: " + ratioList.get(index - 1).item.desc);
             System.out.println("Fin de items/Mochila sin peso");
         }
 

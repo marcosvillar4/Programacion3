@@ -30,9 +30,9 @@ public class Main {
 
         LinkedList<objItem> list = new LinkedList<>();
 
-        list.add(new objItem(10, 20, 1, "1"));
-        list.add(new objItem(5, 15, 2, "2"));
-        list.add(new objItem(50F,25F, 0.5F, "3"));
+        list.add(new objItem(10, 20, 1, "Item 1"));
+        list.add(new objItem(5, 15, 2, "Item 2"));
+        list.add(new objItem(50F,25F, 0.5F, "Item 3"));
 
         mochila func = new mochila();
 
