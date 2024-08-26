@@ -1,7 +1,7 @@
 package Ejercicios;
 
 public class objItem {
-    public objItem(int valor, int peso, int cant, String desc){
+    public objItem(float valor, float peso, float cant, String desc){
         this.valor = valor;
         this.peso = peso;
         this.cant = cant;

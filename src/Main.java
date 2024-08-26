@@ -32,6 +32,7 @@ public class Main {
 
         list.add(new objItem(10, 20, 1, "1"));
         list.add(new objItem(5, 15, 2, "2"));
+        list.add(new objItem(50F,25F, 0.5F, "3"));
 
         mochila func = new mochila();
 
