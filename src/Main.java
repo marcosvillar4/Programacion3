@@ -1,31 +1,44 @@
-import Ejercicios.code;
+import Ejercicios.*;
 
 import java.util.LinkedList;
 public class Main {
 
     public static void main(String[] args){
 
-        code func = new code();
-        //LinkedList a = func.genListaRandom(20, 4);
 
-        LinkedList<Integer> a = new LinkedList<>();
+    //probvuelto();
+    moch();
+    }
 
-        a.addFirst(1);
-        a.addFirst(1);
-        a.addFirst(1);
-        a.addFirst(1);
-        a.addFirst(2);
-        a.addFirst(2);
-        a.addFirst(1);
-        a.addFirst(1);
-        a.addFirst(1);
-        a.addFirst(2);
+    static void probvuelto(){
+        LinkedList<Float> monedas = new LinkedList<>();
 
-        System.out.println(func.mayor(a));
-        //System.out.println(a);
+        monedas.add(50F);
+        monedas.add(20F);
+        monedas.add(10F);
+        monedas.add(5F);
+        monedas.add(1F);
+        monedas.add(0.5F);
+
+        Float[] wrapper = monedas.toArray(new Float[0]);
+        vuelto func = new vuelto(wrapper);
+
+        System.out.println(func.calcWrap(155.3F));
+    }
+
+    static void moch(){
+
+        LinkedList<objItem> list = new LinkedList<>();
+
+        list.add(new objItem(10, 20, 1, "1"));
+        list.add(new objItem(5, 15, 2, "2"));
+
+        mochila func = new mochila();
+
+        ;
+        System.out.println(func.calcMochila(40, list));
 
 
 
-        
     }
 }
