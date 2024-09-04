@@ -33,20 +33,26 @@ public class vuelto {
 
     void calcVuelto(float valor){
         System.out.println("Val: " + valor + " div: " + listval[index] + " index: " + index);
+
         if (valor < listval[index] && (listval.length - 1) == index && valor > 0){
             System.out.println("Queda vuelto imposible: " + valor);
         }
+
         else if (valor >= listval[index] && valor > 0){
+
             System.out.println("val >");
             int intDiv = cantDiv(valor, listval[index]);
             resp.put(listval[index], intDiv);
             valor = valor - intDiv * listval[index];
             calcVuelto(valor);
+
         }
         else if (valor < listval[index] && valor > 0){
+
             System.out.println("val <");
             index++;
             calcVuelto(valor);
+
         }
 
 

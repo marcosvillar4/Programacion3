@@ -53,7 +53,7 @@ public class mochila {
     }
 
 
-    public void calc(float peso){
+    void calc(float peso){
 
         if (index <= (ratioList.size() - 1) && peso > 0){
             float calc = Math.min(ratioList.get(index).item.getCant(), (peso / ratioList.get(index).item.getPeso()));
