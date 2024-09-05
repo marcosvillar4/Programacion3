@@ -11,6 +11,8 @@ public class Main {
         //moch();
         // minDistNode();
 
+        huffman();
+
     }
 
     static void probvuelto(){
@@ -48,7 +50,10 @@ public class Main {
 
     static void huffman(){
 
+        String palabra = "holaa";
 
+        huffman huffman = new huffman();
+        huffman.huffmanCodificacion(palabra);
 
 
     }
