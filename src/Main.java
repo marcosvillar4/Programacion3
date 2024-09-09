@@ -12,9 +12,9 @@ public class Main {
         //moch();
         // minDistNode();
 
-        //huffman();
+        huffman();
         //canoa();
-        conejo();
+        //conejo();
 
     }
 
@@ -55,7 +55,6 @@ public class Main {
 
         String palabra = "hola";
 
-        huffman huffman = new huffman();
         huffman.huffmanCodificacion(palabra);
 
 
