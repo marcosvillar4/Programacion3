@@ -1,6 +1,7 @@
 import Ejercicios.*;
 
 import java.util.LinkedList;
+import java.util.Random;
 
 public class Main {
 
@@ -11,7 +12,9 @@ public class Main {
         //moch();
         // minDistNode();
 
-        huffman();
+        //huffman();
+        //canoa();
+        conejo();
 
     }
 
@@ -41,7 +44,7 @@ public class Main {
 
         mochila func = new mochila();
 
-        ;
+
         System.out.println(func.calcMochila(40, list));
 
 
@@ -50,7 +53,7 @@ public class Main {
 
     static void huffman(){
 
-        String palabra = "holaa";
+        String palabra = "hola";
 
         huffman huffman = new huffman();
         huffman.huffmanCodificacion(palabra);
@@ -115,5 +118,36 @@ public class Main {
         
 
 
+    }
+
+    static void canoa(){
+
+    }
+
+    static void conejo(){
+        int[][] matriz = new int[4][4];
+
+        matriz[0][0] = 2;
+        matriz[0][1] = 3;
+        matriz[0][2] = 2;
+        matriz[0][3] = 1;
+
+        matriz[1][0] = 3;
+        matriz[1][1] = 4;
+        matriz[1][2] = 5;
+        matriz[1][3] = 5;
+
+        matriz[2][0] = 3;
+        matriz[2][1] = 1;
+        matriz[2][2] = 2;
+        matriz[2][3] = 1;
+
+        matriz[3][0] = 8;
+        matriz[3][1] = 2;
+        matriz[3][2] = 3;
+        matriz[3][3] = 2;
+
+
+        conejo.solucion(matriz);
     }
 }

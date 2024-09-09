@@ -37,8 +37,6 @@ public class huffman {
         cant = new TreeMap<>();
         oplist = new LinkedList<>();
 
-
-
         for (char c : palabra.toCharArray()) {
             if (!cant.containsKey(c)){
                 cant.put(c, 1D);
@@ -60,8 +58,6 @@ public class huffman {
 
         oplist.sort(comp);
 
-
-
         while (oplist.size() >= 2){
             hojaChar h1 = oplist.getLast();
             oplist.removeLast();
@@ -69,7 +65,6 @@ public class huffman {
             oplist.removeLast();
 
             hojaChar raiz = new hojaChar(null, h1.prob + h2.prob, h1, h2);
-
             oplist.addLast(raiz);
 
             oplist.sort(comp);
@@ -78,7 +73,6 @@ public class huffman {
         hojaChar raiz = oplist.getLast();
 
         for (Character c : cant.keySet()) {
-            System.out.println("____________________________________________");
             inorder(raiz, new LinkedList<>(), c);
         }
 
