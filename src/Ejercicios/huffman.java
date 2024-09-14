@@ -42,22 +42,31 @@ public class huffman {
 
 
         for (Character c : cant.keySet()) {
-            oplist.add(new hojaChar(c, cant.get(c), null, null));   // Cargamos todos los caracteres a la lista
+            oplist.addLast(new hojaChar(c, cant.get(c), null, null));   // Cargamos todos los caracteres a la lista ---- Costo O(1)
         }
 
         Comparator<hojaChar> comp = new comparator();   // Comparador para el sort
 
-        oplist.sort(comp);  // Sorteamos la lista, los menores van al fondo
+        oplist.sort(comp);  // Sorteamos la lista, los menores van al fondo, Algoritmo se basa en el mergesort ---- Costo O(n log(n))
 
-        while (oplist.size() >= 2){
-            hojaChar h1 = oplist.getLast();
-            oplist.removeLast();                // Guardamos los ultimos 2 objetos de la lista y los sacamos
-            hojaChar h2 = oplist.getLast();
-            oplist.removeLast();
+        while (oplist.size() >= 2){         // Costo total O(n*n log(n))
+            hojaChar h1 = oplist.getLast();     // Costo O(1) Debido a la naturaleza de la linked list en java
+            oplist.removeLast();                // Guardamos los ultimos 2 objetos de la lista y los sacamos ---- Costo O(1)
+            hojaChar h2 = oplist.getLast();     // Costo O(1)
+            oplist.removeLast();                // Costo O(1)
             hojaChar raiz = new hojaChar(null, h1.prob + h2.prob, h1, h2);  // Creamos un nuevo nodo con los 2 nodos guardados como padre e hijo
-            oplist.addLast(raiz);   // Agregamos el nodo al fondo y ordenamos
-            oplist.sort(comp);
+            oplist.addLast(raiz);   // Agregamos el nodo al fondo y ordenamos ---- Costo O(1)
+            oplist.sort(comp);      // Costo O(n log(n))
         }
+
+
+        /*
+
+            Las linkedList de java tienen la particularidad que tienen 2 punteros principales, Uno al principio y otro al final,
+            Aparte, todos los elementos de la lista tienen un puntero al elemento anterior y al proximo, esto permite acelerar las operaciones como insertar y
+            eliminar del inicio y fin
+
+        */
 
         hojaChar raiz = oplist.getLast();   // Finalmente te va a quedar en la lista 1 nodo raiz, este lo usamos con inorder para generar el HashMap respuesta
 
