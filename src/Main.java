@@ -15,7 +15,8 @@ public class Main {
         //huffman();
         //canoa();
         //conejo();
-        MaxSubstring();
+        //MaxSubstring();
+        MaxIntSubstring();
     }
 
     static void probvuelto(){
@@ -157,5 +158,12 @@ public class Main {
 
         System.out.println(substring.subsecuencia(palabra1,palabra2));
 
+    }
+
+    static void MaxIntSubstring(){
+
+        int[] datos = {8,3,2,1,5,3,2,4,3,6,4,5,7,9,13,2};
+
+        IntSequence.intSeq(datos);
     }
 }
