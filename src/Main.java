@@ -12,10 +12,10 @@ public class Main {
         //moch();
         // minDistNode();
 
-        huffman();
+        //huffman();
         //canoa();
         //conejo();
-
+        MaxSubstring();
     }
 
     static void probvuelto(){
@@ -53,7 +53,7 @@ public class Main {
 
     static void huffman(){
 
-        String palabra = "hola";
+        String palabra = "to be or not to be that is the question whether tis nobler in the mind to suffer the slings and arrows\n";
 
         huffman.huffmanCodificacion(palabra);
 
@@ -148,5 +148,14 @@ public class Main {
 
 
         conejo.solucion(matriz);
+    }
+
+    static void MaxSubstring(){
+
+        String palabra1 = "schoehberg";
+        String palabra2 = "webern";
+
+        System.out.println(substring.subsecuencia(palabra1,palabra2));
+
     }
 }
