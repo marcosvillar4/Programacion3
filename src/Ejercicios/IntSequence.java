@@ -3,7 +3,7 @@ package Ejercicios;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class IntSequence {
+public class IntSequence {  
     public static int[] intSeq(int[] data){
 
         Integer[] size = new Integer[data.length];
@@ -38,5 +38,6 @@ public class IntSequence {
         return resp;
 
     }
+
 
 }
