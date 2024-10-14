@@ -1,5 +1,6 @@
 import Ejercicios.*;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -16,7 +17,11 @@ public class Main {
         //canoa();
         //conejo();
         //MaxSubstring();
-        MaxIntSubstring();
+        //MaxIntSubstring();
+
+        //entradasChip();
+
+        damas();
     }
 
     static void probvuelto(){
@@ -165,5 +170,22 @@ public class Main {
         int[] datos = {8,3,2,1,5,3,2,4,3,6,4,5,7,9,13,2};
 
         IntSequence.intSeq(datos);
+
+    }
+
+    static void entradasChip(){
+
+        chip.ejChip(4);
+
+    }
+
+    static void damas(){
+
+        Integer[] array = new Integer[4];
+        damas.damas(array, 0);
+
+        System.out.println(Arrays.toString(array));
+
+
     }
 }
