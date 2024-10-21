@@ -19,9 +19,9 @@ public class Main {
         //MaxSubstring();
         //MaxIntSubstring();
 
-        //entradasChip();
+        entradasChip();
 
-        damas();
+        //damas();
     }
 
     static void probvuelto(){
@@ -175,13 +175,17 @@ public class Main {
 
     static void entradasChip(){
 
-        chip.ejChip(4);
+        LinkedList<String> resp = (chip.ejChip(4));
+
+        System.out.println("------------------------------");
+
+        System.out.println(resp);
 
     }
 
     static void damas(){
 
-        Integer[] array = new Integer[4];
+        Integer[] array = new Integer[8];
         damas.damas(array, 0);
 
         System.out.println(Arrays.toString(array));
