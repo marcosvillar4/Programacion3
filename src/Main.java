@@ -2,7 +2,6 @@ import Ejercicios.*;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.Random;
 
 public class Main {
 
@@ -175,7 +174,7 @@ public class Main {
 
     static void entradasChip(){
 
-        LinkedList<String> resp = (chip.ejChip(4));
+        LinkedList<String> resp = (binario.ejBinario(4));
 
         System.out.println("------------------------------");
 
